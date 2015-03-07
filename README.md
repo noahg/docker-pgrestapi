@@ -26,4 +26,4 @@ Enter the container to debug:
 ```
 docker run -p 3001:3001 -t -i noahg/docker-pgrestapi /bin/bash
 /usr/bin/node /PGRestAPI/app.js
-```ß
+```

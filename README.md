@@ -16,7 +16,7 @@ git clone https://github.com/noahg/docker-pgrestapi.git
 2. Configure database or add files
 ----------
 
-PGRestAPI can serve static shapefiles, mbtiles files, or connect to a Postgres/PostGIS database.
+PGRestAPI can serve static shapefiles, mbtiles files, or connect to a Postgres/PostGIS database, [among other things](https://github.com/spatialdev/PGRestAPI#overview).
 Edit config/settings.js.example with your database settings and/or add some files into appropriate subdirectory under data/ (eg. data/shapefiles/)
 
 *For security reasons, it is recommended that you use a READ ONLY PostGreSQL User.*

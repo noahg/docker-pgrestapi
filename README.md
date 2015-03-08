@@ -34,14 +34,13 @@ Try hitting: http://[boot2docker_ip_address]:3001
 
 Helpful stuff
 --------
-If needed, enter the container to debug and run manually
-```
-docker run -p 3001:3001 -t -i noahg/docker-pgrestapi /bin/bash
-node app.js
-```
-
 Get container name and check logs:
 ```
 docker ps
 docker logs [container name]
+```
+If needed, enter the container to debug and run manually
+```
+docker run -p 3001:3001 -t -i noahg/docker-pgrestapi /bin/bash
+node app.js
 ```

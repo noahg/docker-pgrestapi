@@ -5,8 +5,6 @@ Sets up [PGRestAPI](https://github.com/spatialdev/PGRestAPI) in a docker contain
 
 > PGRestAPI is a Node.js REST API for PostgreSQL Spatial Tables.
 
-Edit config/settings.js.example with your database connection settings
-
 
 1. Clone this repo
 ----------

@@ -40,15 +40,15 @@ RUN npm install -g forever
 RUN git clone https://github.com/spatialdev/PGRestAPI.git && \
       cd PGRestAPI && npm install
 
-# Copy in PGRestAPI configuration file
-ADD config/settings.js.example /PGRestAPI/settings/settings.js
-
 # Demonstrate adding shapefiles on build
 # data/shapefiles/tl_2014_us_state.* files added as example
 ADD data/shapefiles /PGRestAPI/data/shapefiles/
 
 # Demonstrate adding mbtiles on build
 ADD data/pbf_mbtiles /PGRestAPI/data/pbf_mbtiles/
+
+# Copy in PGRestAPI configuration file
+ADD config/settings.js.example /PGRestAPI/settings/settings.js
 
 # Open port
 EXPOSE 3001

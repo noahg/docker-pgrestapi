@@ -30,21 +30,24 @@ RUN add-apt-repository -y ppa:mapnik/nightly-2.3 && \
       apt-get update -y && \
       apt-get install -y libmapnik libmapnik-dev mapnik-utils python-mapnik
       
-# also install datasource plugins if you need them    
+# Install mapnik datasource plugins if you need them    
 RUN apt-get install -y mapnik-input-plugin-gdal mapnik-input-plugin-postgis
 
-#Install Forever
+# Install Forever
 RUN npm install -g forever
 
-#Install PGRestAPI
+# Install PGRestAPI
 RUN git clone https://github.com/spatialdev/PGRestAPI.git && \
       cd PGRestAPI && npm install
 
 # Copy in PGRestAPI configuration file
 ADD /config/settings.js.example /PGRestAPI/settings/settings.js
 
-#Open port
+# Open port
 EXPOSE 3001
 
-#CMD ["/usr/bin/forever", "start", "/PGRestAPI/app.js"]
-#CMD ["/usr/bin/node", "/PGRestAPI/app.js"]
+#  Must start express from project directory
+WORKDIR /PGRestAPI
+
+#CMD ["/usr/bin/node", "app.js"]
+CMD ["/usr/bin/forever", "app.js"]

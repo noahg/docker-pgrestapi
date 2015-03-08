@@ -5,9 +5,16 @@ Sets up [PGRestAPI](https://github.com/spatialdev/PGRestAPI) in a docker contain
 
 Edit config/settings.js.example with your database connection settings
 
+Download the pre-built docker image
+---
+```
+docker pull noahg/docker-pgrestapi
+```
 
-Build the container
+
+Or, build the image from the Dockerfile
 ---------
+Note: this is not necessary if you ran docker pull noahg/docker-pgrestapi
 ```
 git clone https://github.com/noahg/docker-pgrestapi.git
 docker build -t="noahg/docker-pgrestapi" docker-pgrestapi/

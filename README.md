@@ -29,7 +29,7 @@ settings.pg.port = '5432';
 settings.pg.database = 'test';
 ```
 
-3. Build the container
+3. Build the image
 --------
 
 ```
